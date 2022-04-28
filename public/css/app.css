@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* HEADER */
+.bk-blue {
+  background-color: rgb(0, 130, 249);
+  text-transform: uppercase;
+  font-size: 80%;
+  padding: 0.3rem;
+}
+.bk-blue .width {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+.bk-blue .width div {
+  margin-left: 2rem;
+}
+
+.container-header {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-header img {
+  width: 8%;
+}
+.container-header li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+  line-height: 8rem;
+  border-bottom: 7px solid transparent;
+}
+.container-header li:hover {
+  border-bottom: 7px solid rgb(0, 130, 249);
+}
+.container-header li a {
+  text-decoration: none;
+  color: black;
+}
+.container-header li a:active {
+  color: rgb(0, 130, 249);
+}
+
+.form {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 2px solid blue;
+}
+.form div {
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+/* MAINJUMBOTRON */
+.main-jumbotron {
+  background-image: url(/images/jumbotron.jpg);
+  background-size: cover;
+  height: 300px;
+}
+.main-jumbotron .container {
+  width: 1100px;
+  margin: auto;
+  position: relative;
+  height: 100%;
+}
+.main-jumbotron .container button {
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgb(0, 130, 249);
+  border: none;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -24.945px;
+}
+.main-jumbotron .container button:hover {
+  cursor: pointer;
+}
+
+/* MAIN CARDS */
+main {
+  background-color: black;
+}
+
+.container-main-cards {
+  width: 1100px;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.container-main-cards ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.container-main-cards li {
+  width: calc(16.6666666667% - 2rem);
+  margin: 1rem;
+}
+.container-main-cards li div {
+  text-transform: uppercase;
+  color: white;
+  margin-top: 1rem;
+  text-align: start;
+}
+.container-main-cards li img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.container-main-cards button {
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  background-color: rgb(0, 130, 249);
+}
+.container-main-cards button:hover {
+  cursor: pointer;
+}
+
+.second-main {
+  background-color: rgb(0, 130, 249);
+}
+.second-main .container-blue-cards {
+  width: 1100px;
+  margin: auto;
+}
+.second-main .ul-images {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.second-main #img-shop {
+  width: 10%;
+  margin-left: -2rem;
+}
+.second-main .li-inline-block {
+  margin: 3rem 0;
+  width: 220px;
+}
+.second-main .li-inline-block a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.second-main .li-inline-block a img {
+  width: 12%;
+  margin-right: 0.4rem;
+}
+
+.bkg-DC {
+  background-image: url(/images/footer-bg.jpg);
+}
+.bkg-DC .container-third-main {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  max-height: 400px;
+  overflow: hidden;
+}
+.bkg-DC .container-third-main .container {
+  width: 1100px;
+  margin: auto;
+}
+.bkg-DC .container-third-main .float:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bkg-DC .container-third-main .little-container {
+  width: 600px;
+}
+.bkg-DC .container-third-main img {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  bottom: 2rem;
+}
+.bkg-DC .container-third-main .ul-second-main {
+  float: left;
+  margin: 1rem;
+}
+.bkg-DC .container-third-main .ul-second-main h2 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: white;
+  margin-top: 1rem;
+}
+.bkg-DC .container-third-main .second-li {
+  list-style-type: none;
+  margin-bottom: 7px;
+}
+.bkg-DC .container-third-main .second-li a {
+  text-decoration: none;
+  color: grey;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(48, 48, 48);
+}
+footer .container-footer {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .btn {
+  text-transform: uppercase;
+  padding: 0.8rem;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(0, 130, 249);
+}
+footer .btn:hover {
+  cursor: pointer;
+}
+footer .images {
+  display: flex;
+  align-items: center;
+}
+footer .images div {
+  text-transform: uppercase;
+  color: rgb(0, 130, 249);
+  line-height: 5rem;
+  margin-right: 2rem;
+}
+footer .images div:hover {
+  cursor: pointer;
+}
+footer .images img {
+  margin-right: 1rem;
+}
