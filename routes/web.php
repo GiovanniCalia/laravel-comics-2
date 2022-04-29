@@ -14,16 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $parametri = config('headerLinks');
+    $parametri = config('header&MainLinks');
     $cards = config('comics');
-    $photos = config('photo');
 
-    return view('guest.home', $parametri, $cards, $photos);
+    return view('guest.home', $parametri, $cards);
 })->name('home');
 
 
 Route::get('/character', function () {
-    $parametri = config('headerLinks');
+    $parametri = config('header&MainLinks');
     $cards = config('comics');
 
     return view('guest.home', $parametri, $cards,);

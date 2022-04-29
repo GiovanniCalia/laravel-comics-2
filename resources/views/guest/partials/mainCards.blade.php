@@ -15,7 +15,7 @@
     </div>
 
 
-    <div class="second-main">
+    <!--<div class="second-main">
         <div class="container-blue-cards">
             <ul class="ul-images">
                 <li class="li-inline-block">
@@ -50,13 +50,29 @@
                 </li>
             </ul>
         </div>
+    </div>-->
+
+    <div class="second-main">
+        <div class="container-blue-cards">
+            <ul class="ul-images">
+                @foreach ($dcCards as $comic)
+                    <li class="li-inline-block">
+                        <a href="#!">
+                            <img src="{{ $comic['image'] }}" alt="">
+                            <div>{{ $comic['text'] }}</div>
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 
     <section class="bkg-DC">
         <div class="container-third-main">
             <div class="container float">
               <div class="little-container">
-                <ul class="ul-second-main">
+
+                <!--<ul class="ul-second-main">
                     <h2>dc comics</h2>
                     <li class="second-li">
                         <a href="">
@@ -106,9 +122,29 @@
                            <div>Shop DC Collectibles</div>
                         </a>
                     </li>
-                </ul>
-    
+                </ul>-->
+
                 <ul class="ul-second-main">
+                    <h2>dc comics</h2>
+                    @foreach ($dcComics as $comics)
+                    <li class="second-li">
+                        <a href="">
+                           <div>{{ $comics['text'] }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+
+                    <h2>shop</h2>
+                    @foreach ($shop as $link)
+                    <li class="second-li" >
+                        <a href="#!">
+                           <div>{{ $link['text'] }}</div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+
+                <!--<ul class="ul-second-main">
                     <h2>dc</h2>
                     <li class="second-li">
                         <a href="#!">
@@ -165,35 +201,28 @@
                             <div>Contact Us</div>
                         </a>
                     </li>
+                </ul>-->
+
+                <ul class="ul-second-main">
+                    <h2>dc</h2>
+                    @foreach ($dc as $settings)
+                    <li class="second-li">
+                        <a href="#!">
+                            <div>{{ $settings['text'] }}</div>
+                        </a>
+                    </li>
+                    @endforeach
                 </ul>
 
                 <ul class="ul-second-main">
                     <h2>sites</h2>
+                    @foreach ($sites as $site)
                     <li class="second-li">
                         <a href="#!">
-                            <div>DC</div>
+                            <div>{{ $site['text'] }}</div>
                         </a>
                     </li>
-                    <li class="second-li">
-                        <a href="#!">
-                            <div>MAD Magazine</div>
-                        </a>
-                    </li>
-                    <li class="second-li">
-                        <a href="#!">
-                            <div>DC Kids</div>
-                        </a>
-                    </li>
-                    <li class="second-li">
-                        <a href="#!">
-                            <div>DC Universe</div>
-                        </a>
-                    </li>
-                    <li class="second-li">
-                        <a href="#!">
-                            <div>DC Power visa</div>
-                        </a>
-                    </li>
+                    @endforeach
                 </ul>
               </div>
             </div>
