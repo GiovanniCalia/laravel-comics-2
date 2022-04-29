@@ -16,6 +16,8 @@
 
     @include('guest.partials.mainJumbotron')
 
+    @include('guest.partials.comicBook')
+
     @include('guest.partials.footer')
     
 </body>

@@ -25,7 +25,7 @@ Route::get('/character', function () {
     $parametri = config('header&MainLinks');
     $cards = config('comics');
 
-    return view('guest.home', $parametri, $cards,);
+    return view('guest.character', $parametri, $cards,);
 })->name('character');
 
 
