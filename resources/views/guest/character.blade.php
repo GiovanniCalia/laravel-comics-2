@@ -1,7 +1,3 @@
-@extends('guest.template.base')
+@extends('guest.template.altraPagina')
 
-@section('title', $title)
-
-@section('content')
-<h1>{{ $product['title'] }}</h1>
-@endsection
+@section('title', 'Comic')

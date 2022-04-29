@@ -22,18 +22,11 @@ Route::get('/', function () {
 })->name('home');
 
 
+Route::get('/character', function () {
+    $parametri = config('headerLinks');
+    $cards = config('comics');
 
-/*
-Route::get('/charact/{id}', function ($id) {
-    $comics = collect(config('comics'));
-    $selectedComic = $comics->firstwhere('id', $id);
-    if ($selectedComic === null) abort(404);
-
-    return view('guest.character', [
-        'title' => $selectedComic['title'],
-        'product' => $selectedComic
-    ]);
+    return view('guest.home', $parametri, $cards,);
 })->name('character');
-*/
 
 
