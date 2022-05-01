@@ -4,8 +4,8 @@
         <ul>
             @foreach ($cards as $card)
             <li>
-                <a href="{{ route('character') }}">
-                    <img src="{{ $card['thumb'] }}" alt="">
+                <a href="{{ route('character', ['id' => $card['id']]) }}">
+                    <img src="{{ $card['thumb'] }}" alt="{{ $card['series'] }}">
                     <div>{{ $card['series'] }}</div>
                 </a>
             </li>

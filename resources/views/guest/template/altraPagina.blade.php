@@ -16,7 +16,7 @@
 
     @include('guest.partials.mainJumbotron')
 
-    @include('guest.partials.comicBook')
+    @yield('contenuto')
 
     @include('guest.partials.footer')
     

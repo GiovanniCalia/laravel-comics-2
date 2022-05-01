@@ -1,6 +1,14 @@
 <?php
 
 return [
+    'pages' => [
+        [
+            'route' => 'Character'
+        ],
+        [
+            'route' => 'Character2'
+        ],
+    ],
     'links' => [
         [
             'name' => 'CHARACTERS'

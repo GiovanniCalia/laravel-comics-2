@@ -9,7 +9,7 @@
         <img src="/images/dc-logo.png" alt="DC logo">
         <ul>
             @foreach ($links as $link)
-                <li><a href="#!">{{ $link['name'] }}</a></li>
+                <li><a href="{{ route('characters')}}">{{ $link['name'] }}</a></li>
             @endforeach
         </ul>
         <div class="form">

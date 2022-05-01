@@ -21,11 +21,19 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::get('/character', function () {
+Route::get('/characters', function () {
     $parametri = config('header&MainLinks');
     $cards = config('comics');
 
-    return view('guest.character', $parametri, $cards,);
+    return view('guest.characters', $parametri, $cards,);
+})->name('characters');
+
+
+Route::get('/characters/{id}', function ($id) {
+    //$parametri = config('header&MainLinks');
+    $cards = collect(config('comics'));
+    $selectedCard = $cards->firstwhere('id', $id);
+    // if ($selectedCard === null) abort(404);
+
+    return view('guest.character', [ 'cards' => $selectedCard]);
 })->name('character');
-
-
