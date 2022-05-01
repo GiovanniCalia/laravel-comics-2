@@ -1,9 +1,11 @@
-@extends('guest.template.altraPagina')
+@extends('guest.template.linkPagina')
 
 @section('title', 'Comic')
 
 @section('content')
-    <h1>{{ $cards['title'] }}</h1>
-    <h2>{{ $cards['description'] }}</h2>
-    <p>{{ $cards['type'] }}</p>
+    <a href="{{ route('home') }}">Torna alla home</a>
+    <h1>{{ isset($cards['title']) }}</h1>
+    <h2>{{ isset($cards['description']) }}</h2>
+    <p>{{ isset($cards['type']) }}</p>
 @endsection
+

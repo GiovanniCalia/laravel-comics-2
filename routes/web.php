@@ -30,10 +30,11 @@ Route::get('/characters', function () {
 
 
 Route::get('/characters/{id}', function ($id) {
-    //$parametri = config('header&MainLinks');
+    $parametri = config('header&MainLinks');
     $cards = collect(config('comics'));
     $selectedCard = $cards->firstwhere('id', $id);
-    // if ($selectedCard === null) abort(404);
+    //if ($selectedCard === null) abort(404);
 
-    return view('guest.character', [ 'cards' => $selectedCard]);
+    return view('guest.character', $parametri, [
+        'cards' => $selectedCard]);
 })->name('character');

@@ -16,7 +16,7 @@
 
     @include('guest.partials.mainJumbotron')
 
-    @yield('contenuto')
+    @yield('content')
 
     @include('guest.partials.footer')
     
