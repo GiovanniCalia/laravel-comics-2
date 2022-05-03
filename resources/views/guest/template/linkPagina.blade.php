@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 </head>
 <body>
-    @include('guest.partials.header')
+   {{--@include('guest.partials.header')--}}
 
     @include('guest.partials.mainJumbotron')
 

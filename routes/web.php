@@ -14,27 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $parametri = config('header&MainLinks');
     $cards = config('comics');
 
-    return view('guest.home', $parametri, $cards);
+    return view('guest.home', $cards);
 })->name('home');
 
 
 Route::get('/characters', function () {
-    $parametri = config('header&MainLinks');
     $cards = config('comics');
 
-    return view('guest.characters', $parametri, $cards,);
+    return view('guest.characters', $cards);
 })->name('characters');
 
 
 Route::get('/characters/{id}', function ($id) {
-    $parametri = config('header&MainLinks');
-    $cards = collect(config('comics'));
+    $cards = collect(config('comics2'));
     $selectedCard = $cards->firstwhere('id', $id);
-    //if ($selectedCard === null) abort(404);
+    if ($selectedCard === null) abort(404);
+    $data = [
+        'selectedCard' => $selectedCard,
+    ];
 
-    return view('guest.character', $parametri, [
-        'cards' => $selectedCard]);
+    return view('guest.character', $data);
 })->name('character');
